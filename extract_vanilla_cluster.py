@@ -111,11 +111,9 @@ def main(args):
     
     for img_info in total_cluster:
         cur_dir = './unlabelled_images/' + img_info[0]
-        new_dir = cluster_dir + str(img_info[1])+'/'+img_info[0].split('/')[1]
+        new_dir = cluster_dir + str(img_info[1]+1)+'/'+img_info[0].split('/')[1]
 
-        to_make_dir = cluster_dir + str(img_info[1])
-        if not os.path.exists(to_make_dir):
-            os.makedirs(to_make_dir)
+
 
         # print(cur_dir, new_dir)
         # ./unlabelled_images/1/7296_12916.png ./cluster_LAO/0/7296_12916.png
