@@ -111,7 +111,11 @@ def main(args):
     
     for img_info in total_cluster:
         cur_dir = './unlabelled_images/' + img_info[0]
-        new_dir = cluster_dir + str(img_info[1]+1)+'/'+img_info[0].split('/')[1]    ## JAEYEON 0726: str(img_info[1]) --> str(img_info[1]+1) ; img_info[1]으로 하면 0부터 시작인데 0으로 하면 폴더명으로 인식 안됨 따라서 하나 올려서 1부터 시작 
+        new_dir = cluster_dir + str(img_info[1])+'/'+img_info[0].split('/')[1]
+
+        to_make_dir = cluster_dir + str(img_info[1])
+        if not os.path.exists(to_make_dir):
+            os.makedirs(to_make_dir)
 
         # print(cur_dir, new_dir)
         # ./unlabelled_images/1/7296_12916.png ./cluster_LAO/0/7296_12916.png
