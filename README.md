@@ -5,7 +5,7 @@ Setting
 - 2. use google colab pro
 - 3. mount your google colab on your google drive; drive.mount('/content/drive') --> mkdir kdd --> cd kdd
 - 4. run
-- 5. if you made any important progress, please push your local projects on this repo
+- 5. if you have made any important progress, please push your local projects on this repo
 
 KDD Algorithm 
 - Procedure (80/100) as of 26 July
